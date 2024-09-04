@@ -10,7 +10,21 @@ noBtn.addEventListener('click', () => {
     //HINT # 3: This button has position 'absolute', which means that its position in the html document could
     //be given by the style properties left and top (in px values)
 
-    
+    // HINT #1:
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    // HINT #2:
+    const buttonWidth = noBtn.offsetWidth;
+    const buttonHeight = noBtn.offsetHeight;
+
+    // HINT #3:
+    const newLeft = Math.random() * (screenWidth - buttonWidth);
+    const newTop = Math.random() * (screenHeight - buttonHeight);
+
+    // Aplicar las nuevas posiciones al botón
+    noBtn.style.left = `${newLeft}px`;
+    noBtn.style.top = `${newTop}px`;
 });
 
 yesBtn.addEventListener('click', () => {
